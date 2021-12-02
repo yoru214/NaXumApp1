@@ -26,6 +26,7 @@
                                     <th>Distributor</th>
                                     <th>Referred Distributor</th>
                                     <th>Order Date</th>
+                                    <th>Order Total</th>
                                     <th>Percentage</th>
                                     <th>Commision</th>
                                 </tr>
@@ -45,10 +46,14 @@
                 serverSide: true,
                 ajax: "{{ route('transactions') }}",
                 columns: [
-                    { "data": "id" },
-                    { "data": "name" },
-                    { "data": "email" },
-                    { "data": "gender" },
+                    { "data": "invoice" },
+                    { "data": "purchaser" },
+                    { "data": "distributor" },
+                    { "data": "referred" },
+                    { "data": "order_date" },
+                    { "data": "order_total" },
+                    { "data": "percentage" },
+                    { "data": "commission" },
                 ],
             });
         });
